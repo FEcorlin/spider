@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<button id="start">开始</button>
+<script>
+    window.onload = function () {
+        document.getElementById('start').onclick = function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET",'/start');
+            xhr.send();
+            xhr.onreadystatechange = function (state) {
+                console.log(state);
+            }
+        }
+    }
+</script>
+</body>
+</html>
